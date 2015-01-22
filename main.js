@@ -1,13 +1,14 @@
-$(document).ready(function() {
+$(document).ready( function() {
+   var $main = $('nav a').eq(0);
+   var $City = $('nav a').eq(1);
+   var $Abstract = $('nav a').eq(2);
+   var $Food = $('nav a').eq(3);
+   var $Nightlife = $('nav a').eq(4);
+   var $Animals = $('nav a').eq(5);
+   var $Nature = $('nav a').eq(6);
 
-   var $post1 = $('nav a').eq(0);
-   var $post2 = $('nav a').eq(1);
-   var $post3 = $('nav a').eq(2);
-   var $post4 = $('nav a').eq(3);
-   var $post5 = $('nav a').eq(4);
-   var $post6 = $('nav a').eq(5);
 
-   $post1.click(function (event) {
+   $main.click(function (event) {
      event.preventDefault();
      var $myLi = $(this).closest("li");
      var $mySiblings = $myLi.siblings();
@@ -15,57 +16,150 @@ $(document).ready(function() {
      $mySiblings.removeClass("activeNav");
      $myLi.addClass("activeNav");
 
-     $('.post1').siblings().removeClass("active");
-     $('.post1').addClass('active');
+     $('.main').siblings().removeClass("active");
+     $('.main').addClass("active");
 
    });
 
-     $post2.click(function (event) {
+   $City.click(function (event) {
+     event.preventDefault();
+     var $myLi = $(this).closest("li");
+     var $mySiblings = $myLi.siblings();
+
+     $mySiblings.removeClass("activeNav");
+     $myLi.addClass("activeNav");
+
+     $('.City').siblings().removeClass("active");
+     $('.City').addClass("active");
+
+   });
+
+     $Abstract.click(function (event) {
      event.preventDefault();
 
      $(this).closest("li").siblings().removeClass("activeNav");
      $(this).closest("li").addClass("activeNav");
-     $('.post2').siblings().removeClass("active");
-     $('.post2').addClass('active');
+     $('.Abstract').siblings().removeClass("active");
+     $('.Abstract').addClass("active");
 
    });
 
-   $post4.click(function (event) {
+   $Food.click(function (event) {
      event.preventDefault();
 
      $(this).closest("li").siblings().removeClass("activeNav");
      $(this).closest("li").addClass("activeNav");
-     $('.post3').siblings().removeClass("active");
-     $('.post3').addClass('active');
+     $('.Food').siblings().removeClass("active");
+     $('.Food').addClass("active");
 
   });
 
-  $post4.click(function (event) {
+  $Nightlife.click(function (event) {
     event.preventDefault();
 
     $(this).closest("li").siblings().removeClass("activeNav");
     $(this).closest("li").addClass("activeNav");
-    $('.post4').siblings().removeClass("active");
-    $('.post4').addClass('active');
+    $('.Nightlife').siblings().removeClass("active");
+    $('.Nightlife').addClass("active");
 
   });
 
-  $post5.click(function (event) {
+  $Animals.click(function (event) {
     event.preventDefault();
 
     $(this).closest("li").siblings().removeClass("activeNav");
     $(this).closest("li").addClass("activeNav");
-    $('.post5').siblings().removeClass("active");
-    $('.post5').addClass('active');
+    $('.Animals').siblings().removeClass("active");
+    $('.Animals').addClass("active");
 
   });
 
-  $post6.click(function (event) {
+  $Nature.click(function (event) {
     event.preventDefault();
 
     $(this).closest("li").siblings().removeClass("activeNav");
     $(this).closest("li").addClass("activeNav");
-    $('.post6').siblings().removeClass("active");
-    $('.post6').addClass('active');
+    $('.Nature').siblings().removeClass("active");
+    $('.Nature').addClass('active');
 
   });
+
+  $('.City li').click(function (event){
+    event.preventDefault();
+
+    $(this).closest("li").siblings().addClass("unchosen");
+    $(this).closest("li").siblings().removeClass("chosen");
+    $(this).closest("li").addClass("chosen");
+    $(this).closest("li").removeClass("unchosen");
+    $('aside').addClass("unchosen");
+
+  });
+
+  $('.Abstract li').click(function (event){
+    event.preventDefault();
+
+    $(this).closest("li").siblings().addClass("unchosen");
+    $(this).closest("li").siblings().removeClass("chosen");
+    $(this).closest("li").addClass("chosen");
+    $(this).closest("li").removeClass("unchosen");
+    $('aside').addClass("unchosen");
+
+  });
+
+  $('.Food li').click(function (event){
+    event.preventDefault();
+
+    $(this).closest("li").siblings().addClass("unchosen");
+    $(this).closest("li").siblings().removeClass("chosen");
+    $(this).closest("li").addClass("chosen");
+    $(this).closest("li").removeClass("unchosen");
+    $('aside').addClass("unchosen");
+
+  });
+
+  $('.Nightlife li').click(function (event){
+    event.preventDefault();
+
+    $(this).closest("li").siblings().addClass("unchosen");
+    $(this).closest("li").siblings().removeClass("chosen");
+    $(this).closest("li").addClass("chosen");
+    $(this).closest("li").removeClass("unchosen");
+    $('aside').addClass("unchosen");
+
+  });
+
+  $('.Animals li').click(function (event){
+    event.preventDefault();
+
+    $(this).closest("li").siblings().addClass("unchosen");
+    $(this).closest("li").siblings().removeClass("chosen");
+    $(this).closest("li").addClass("chosen");
+    $(this).closest("li").removeClass("unchosen");
+    $('aside').addClass("unchosen");
+
+  });
+
+  $('.Nature li').click(function (event){
+    event.preventDefault();
+
+    $(this).closest("li").siblings().addClass("unchosen");
+    $(this).closest("li").siblings().removeClass("chosen");
+    $(this).closest("li").addClass("chosen");
+    $(this).closest("li").removeClass("unchosen");
+    $('aside').addClass("unchosen");
+
+    /*$('.Nature li').click(function (event){
+      event.preventDefault();
+
+      $(this).closest("li").siblings().removeClass("unchosen");
+      $(this).closest("li").removeClass("chosen");
+      $('aside').removeClass("unchosen");
+    });*/
+
+  });
+
+
+
+
+
+});
